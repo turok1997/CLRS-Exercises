@@ -1,0 +1,8 @@
+Give a real-world example that requires sorting or a real-world example that
+requires computing a convex hull.
+
+A potential real-world problem that requires sorting might be organizing
+a group of people with priority numbers into a line, such as people waiting
+their turn at a deli or something.
+
+(What about convex hull?)
