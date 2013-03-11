@@ -1,4 +1,4 @@
-#Problem 1-1#
+ #Problem 1-1#
 
 For each function f(n) and time t in the following table, determine the largest
 size n of a problem that can be solved in time t, assuming that the algorithm
@@ -25,7 +25,7 @@ to solve the problem takes f(n) microseconds.
     +-------+----------+----------+----------+----------+----------+----------+----------+
 
 
-##Definitions##
+ ##Definitions##
 
 -- I know month, year, and century numbers aren't exact but nothing here is critical anyway... --
 
@@ -38,7 +38,7 @@ to solve the problem takes f(n) microseconds.
     century = 100 years
 
 
-## O(lg n) ##
+ ## O(lg n) ##
 lg n = Tµs => n = 2^T µs
 
     lg n = 1 second  => n = 2^1000000 = 9.9e301029
@@ -50,7 +50,7 @@ lg n = Tµs => n = 2^T µs
     lg n = 1 century => n = 2^3153600000000000
 
 
-## O(sqrt n) ##
+ ## O(sqrt n) ##
 sqrt n = Tµs => n = T^2 µs
 
     1 second  => 1000000^2          = 1.0e12 instructions
@@ -62,7 +62,7 @@ sqrt n = Tµs => n = T^2 µs
     1 century => 3153600000000000^2 = 9.94519296e30
 
 
-## O(n) ##
+ ## O(n) ##
 n = Tµs
 
     1 second  => 1000000 instructions
@@ -74,7 +74,7 @@ n = Tµs
     1 century => 3153600000000000
 
 
-## O(n lg n) ##
+ ## O(n lg n) ##
 n lg n = Tµs
 
 I don't feel like solving for n here so I'm just using a program in TI-BASIC for my TI-89
@@ -96,7 +96,7 @@ Evaluating for the required times results in:
     1 century => 6.86110e13 (Used WolframAlpha for this one because it was too large for my TI-89)
 
 
-## O(n^2) ##
+ ## O(n^2) ##
 n^2 = T => n = sqrt T
 
     1 second  => sqrt 1000000          = 1000 instructions
@@ -108,7 +108,7 @@ n^2 = T => n = sqrt T
     1 century => sqrt 3153600000000000 = 56156922
 
 
-## O(n^3) ##
+ ## O(n^3) ##
 n^3 = T => n = T^(1/3)
 
     1 second  => 1000000^(1/3)          = 99 (rounded down from 99.99999999999997, like others)
@@ -120,7 +120,7 @@ n^3 = T => n = T^(1/3)
     1 century => 3153600000000000^(1/3) = 14645
 
 
-## O(2^n) ##
+ ## O(2^n) ##
 2^n = T => n = lg T
 
     1 second  => lg 1000000          = 19
@@ -132,7 +132,7 @@ n^3 = T => n = T^(1/3)
     1 century => lg 3153600000000000 = 51
 
 
-## O(n!)
+ ## O(n!)
 n! = T
 
 Using Haskell because I don't want to solve for n in n!
