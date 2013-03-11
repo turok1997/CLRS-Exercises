@@ -49,6 +49,15 @@ lg n = 1 century => n = 2^3153600000000000
 1 year    => 31536000000000^2   = 9.94519296e26
 1 century => 3153600000000000^2 = 9.94519296e30
 
+-- n = Tµs --
+1 second  => 1000000 instructions
+1 minute  => 60000000
+1 hour    => 3600000000
+1 day     => 86400000000
+1 month   => 2592000000000
+1 year    => 31536000000000
+1 century => 3153600000000000
+
 -- n lg n = Tµs --
 I don't feel like solving for n here so I'm just using a program in TI-BASIC for my TI-89
 
@@ -65,19 +74,6 @@ Evaluating for the required times results in:
 1 month   => 7.18709e10
 1 year    => 7.97634e11
 1 century => 6.86110e13 (Used WolframAlpha for this one because it was too large for my TI-89)
-
-
--- n = Tµs --
-1 second  => 1000000 instructions
-1 minute  => 60000000
-1 hour    => 3600000000
-1 day     => 86400000000
-1 month   => 2592000000000
-1 year    => 31536000000000
-1 century => 3153600000000000
-
-
--- used computer for now... --
 
 -- n^2 = T => n = sqrt T --
 1 second  => sqrt 1000000          = 1000 instructions
