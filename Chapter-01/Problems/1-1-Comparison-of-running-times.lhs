@@ -157,7 +157,7 @@ Using Haskell because I don't want to solve for n in n!
 
 >    resultsFactorial :: [(Time, Instructions)]
 >    resultsFactorial = map (\t -> (t, maxInstructions factorial t)) $ times
->
+
 >    main = print resultsFactorial
 
 Results for resultsFactorial:
