@@ -1,4 +1,4 @@
- #Problem 1-1#
+=Problem 1-1=
 
 For each function f(n) and time t in the following table, determine the largest
 size n of a problem that can be solved in time t, assuming that the algorithm
