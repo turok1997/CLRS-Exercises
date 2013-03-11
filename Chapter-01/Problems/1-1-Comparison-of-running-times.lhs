@@ -103,7 +103,7 @@ Evaluating for the required times results in:
 1 century => lg 3153600000000000 = 51
 
 -- n! = T --
-Using Haskell because I don't want to solve for n in n! or in n lg n...
+Using Haskell because I don't want to solve for n in n!
 
 >
 > type Time         = Double
