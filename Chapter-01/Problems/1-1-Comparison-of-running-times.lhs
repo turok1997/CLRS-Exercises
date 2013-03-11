@@ -125,7 +125,6 @@ Evaluating for the required times results in:
 
 Using Haskell because I don't want to solve for n in n!
 
->
 > type Time         = Double
 > type Instructions = Integer
 >
@@ -146,9 +145,8 @@ Using Haskell because I don't want to solve for n in n!
 >
 > resultsFactorial :: [(Time, Instructions)]
 > resultsFactorial = map (\t -> (t, maxInstructions factorial t)) $ times
-> 
-> main = print resultsFactorial
 >
+> main = print resultsFactorial
 
 results for resultsFactorial:
 
