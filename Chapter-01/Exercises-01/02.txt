@@ -1,0 +1,7 @@
+Other than speed, what other measures of efficiency might one use in a
+real-world setting?
+
+Other than speed, a common consideration for algorithmic efficiency is space.
+Algorithms that require less memory space to operate may be more desirable in
+situations where memory is limited than faster algorithms that require large
+amounts of space.
