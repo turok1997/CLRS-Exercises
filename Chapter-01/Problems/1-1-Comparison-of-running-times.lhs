@@ -1,4 +1,4 @@
-=Problem 1-1=
+<h1>Problem 1-1</h1>
 
 For each function f(n) and time t in the following table, determine the largest
 size n of a problem that can be solved in time t, assuming that the algorithm
@@ -25,7 +25,7 @@ to solve the problem takes f(n) microseconds.
     +-------+----------+----------+----------+----------+----------+----------+----------+
 
 
- ##Definitions##
+<h2>Definitions</h2>
 
 -- I know month, year, and century numbers aren't exact but nothing here is critical anyway... --
 
@@ -38,7 +38,7 @@ to solve the problem takes f(n) microseconds.
     century = 100 years
 
 
- ## O(lg n) ##
+<h2> O(lg n) </h2>
 lg n = Tµs => n = 2^T µs
 
     lg n = 1 second  => n = 2^1000000 = 9.9e301029
@@ -50,7 +50,7 @@ lg n = Tµs => n = 2^T µs
     lg n = 1 century => n = 2^3153600000000000
 
 
- ## O(sqrt n) ##
+<h2> O(sqrt n) </h2>
 sqrt n = Tµs => n = T^2 µs
 
     1 second  => 1000000^2          = 1.0e12 instructions
@@ -62,7 +62,7 @@ sqrt n = Tµs => n = T^2 µs
     1 century => 3153600000000000^2 = 9.94519296e30
 
 
- ## O(n) ##
+<h2> O(n) </h2>
 n = Tµs
 
     1 second  => 1000000 instructions
