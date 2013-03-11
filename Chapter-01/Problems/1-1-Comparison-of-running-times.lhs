@@ -160,7 +160,7 @@ Using Haskell because I don't want to solve for n in n!
 >
 > main = print resultsFactorial
 
-results for resultsFactorial:
+Results for resultsFactorial:
 
     1 second  => 9
     1 minute  => 11
