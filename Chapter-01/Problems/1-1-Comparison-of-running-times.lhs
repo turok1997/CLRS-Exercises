@@ -137,29 +137,29 @@ n! = T
 
 Using Haskell because I don't want to solve for n in n!
 
->
-> type Time         = Double
-> type Instructions = Integer
-> 
-> times = [ 1000000          -- 1 second
->         , 60000000         -- 1 minute
->         , 3600000000       -- 1 hour
->         , 86400000000      -- 1 day
->         , 2592000000000    -- 1 month
->         , 31536000000000   -- 1 year
->         , 3153600000000000 -- 1 century
->         ]
->
-> maxInstructions :: (Instructions -> Time) -> Time -> Instructions
-> maxInstructions f t = head . reverse . takeWhile (\n -> t > f n) $ [1..]
->
-> factorial :: Instructions -> Time
-> factorial n = product [1..(fromIntegral n)]
->
-> resultsFactorial :: [(Time, Instructions)]
-> resultsFactorial = map (\t -> (t, maxInstructions factorial t)) $ times
->
-> main = print resultsFactorial
+    >
+    > type Time         = Double
+    > type Instructions = Integer
+    > 
+    > times = [ 1000000          -- 1 second
+    >         , 60000000         -- 1 minute
+    >         , 3600000000       -- 1 hour
+    >         , 86400000000      -- 1 day
+    >         , 2592000000000    -- 1 month
+    >         , 31536000000000   -- 1 year
+    >         , 3153600000000000 -- 1 century
+    >         ]
+    >
+    > maxInstructions :: (Instructions -> Time) -> Time -> Instructions
+    > maxInstructions f t = head . reverse . takeWhile (\n -> t > f n) $ [1..]
+    >
+    > factorial :: Instructions -> Time
+    > factorial n = product [1..(fromIntegral n)]
+    >
+    > resultsFactorial :: [(Time, Instructions)]
+    > resultsFactorial = map (\t -> (t, maxInstructions factorial t)) $ times
+    >
+    > main = print resultsFactorial
 
 Results for resultsFactorial:
 
