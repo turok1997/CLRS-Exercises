@@ -74,7 +74,7 @@ n = Tµs
     1 century => 3153600000000000
 
 
- ## O(n lg n) ##
+<h2> O(n lg n) </h2>
 n lg n = Tµs
 
 I don't feel like solving for n here so I'm just using a program in TI-BASIC for my TI-89
@@ -96,7 +96,7 @@ Evaluating for the required times results in:
     1 century => 6.86110e13 (Used WolframAlpha for this one because it was too large for my TI-89)
 
 
- ## O(n^2) ##
+<h2> O(n^2) </h2>
 n^2 = T => n = sqrt T
 
     1 second  => sqrt 1000000          = 1000 instructions
@@ -108,7 +108,7 @@ n^2 = T => n = sqrt T
     1 century => sqrt 3153600000000000 = 56156922
 
 
- ## O(n^3) ##
+<h2> O(n^3) </h2>
 n^3 = T => n = T^(1/3)
 
     1 second  => 1000000^(1/3)          = 99 (rounded down from 99.99999999999997, like others)
@@ -120,7 +120,7 @@ n^3 = T => n = T^(1/3)
     1 century => 3153600000000000^(1/3) = 14645
 
 
- ## O(2^n) ##
+<h2> O(2^n) </h2>
 2^n = T => n = lg T
 
     1 second  => lg 1000000          = 19
@@ -132,7 +132,7 @@ n^3 = T => n = T^(1/3)
     1 century => lg 3153600000000000 = 51
 
 
- ## O(n!)
+<h2> O(n!) </h2>
 n! = T
 
 Using Haskell because I don't want to solve for n in n!
