@@ -1,9 +1,0 @@
-How are the shortest-path and traveling-salesman problems given above similar?
-How are they different?
-
-The shortest-path and traveling-salesman are similar in that they both involve
-a graph of vertices with differing costs associated with their edges.  They are
-different in that they have different constraints on their favored paths.  The
-shortest-path problem doesn't require visiting every vertex, the
-traveling-salesman problem requires visiting each node.  An algorithm for either
-could be applied to the same graph.
