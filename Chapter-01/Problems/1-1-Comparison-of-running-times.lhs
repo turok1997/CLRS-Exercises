@@ -121,7 +121,7 @@ Evaluating for the required times results in:
     1 century => lg 3153600000000000 = 51
 
 
--- n! = T --
+* n! = T *
 
 Using Haskell because I don't want to solve for n in n!
 
