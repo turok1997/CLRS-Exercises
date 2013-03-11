@@ -1,0 +1,8 @@
+Give an example of an application that requires algorithmic content at the
+application level, and discuss the function of the algorithms involved.
+
+One example of a program that requires algorithmic content would be a video game
+involving units that are told to move from one location to another with obstacles
+between the locations.  This path-finding problem requires an algorithm that
+evaluates the different routes and finds the best path from the origin to the end
+point.
