@@ -1,0 +1,16 @@
+What is the smallest value of n such that an algorithm whose running time is
+100n^2 runs faster than an algorithm whose running time is 2^n on the same
+machine?
+
+when n = 14:
+100n^2 => 100*14^2 => 100*196 => 19600
+2^n => 2^14 => 16384
+19600 > 16384
+therefore at n = 14 the faster is 2^n
+
+when n = 15:
+100n^2 => 100*15^2 => 100*225 => 22500
+2^n => 2^15 => 32768
+22500 < 32768
+therefore at n = 15 the faster is 100n^2
+therefore n = 15 is the smallest value of n where 100n^2 is faster
