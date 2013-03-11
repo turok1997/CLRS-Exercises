@@ -1,0 +1,10 @@
+Come up with a real-world problem in which only the best solution will do.  Then
+come up with one in which a solution that is "approximately" the best is good
+enough.
+
+Going back to the traveling-salesman and shortest-path problems, the
+traveling-salesman problem can be solved with a "good enough" solution because
+the work required to find the best solution (if possible) has little benefit
+over an easier to discover "good" solution.  However, the shortest-path problem
+can be easily solved for the best solution.
+
