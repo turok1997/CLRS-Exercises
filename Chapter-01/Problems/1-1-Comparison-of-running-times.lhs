@@ -22,7 +22,7 @@ to solve the problem takes f(n) microseconds.
     |  n!   |    9     |     11   |   12     |   13     |   15     |   16     |    17    |
     +-------+----------+----------+----------+----------+----------+----------+----------+
 
-  -- I know month, year, and century numbers aren't exact but nothing here is critical anyway... --
+    -- I know month, year, and century numbers aren't exact but nothing here is critical anyway... --
     second  = 1000000 microseconds
     minute  = 60 seconds
     hour    = 60 minutes
