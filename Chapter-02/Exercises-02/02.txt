@@ -1,0 +1,22 @@
+Consider sorting n numbers stored in array A by first finding the smallest
+element of A and exchanging it with the element in A[1].  Then find the second
+smallest element of A, and exchange it with A[2].  Continue in this manner
+for the first n-1 elements of A.  Write pseudocode for this algorithm, which
+is known as selection sort.  What loop invariant does this algorithm maintain?
+Why does it need to run for only the first n-1 elements, rather than for all
+n elements?  Give the best-case and worst-case running times of selection sort
+in Θ-notation.
+
+SELECTION-SORT(A)
+    for i = 1 to A.length - 1
+        key = i
+        for j = i+1 to A.length
+            if A[j] < A[key]
+                key = j
+        SWAP(A[i], A[key])
+
+At the beginning of each outer loop the first i-1 elements have been sorted.
+At the beginning of each inner loop the smallest element in the subarray [i..j-1]
+has been located and stored in key.
+
+The worst and best case time for this algorithm is Θ(n^2)
