@@ -1,0 +1,4 @@
+How can we modify almost any algorithm to have a good best-case running time?
+
+If the algorithm first checks to see if the desired result is the input
+then it can avoid the work of transforming the input into the output.
