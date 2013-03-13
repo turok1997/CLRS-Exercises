@@ -5,3 +5,21 @@ solution of the recurrence
             2T(n/2) + n     if n = 2^k, for k > 1
 
 is T(n) = n lg n
+
+basis:
+T(2) = 2 = 2 lg 2
+
+induction:
+T(k+1) = 2T(2^(k+1)/2) + 2^(k+1)
+2T(2^k) + 2^(k+1)
+2(2^k lg 2^k) + 2^(k+1)
+2 * 2^k * lg 2^k + 2^(k+1)
+2^(k+1) * lg 2^k + 2^(k+1)
+2^(k+1) * (lg 2^k + 1)
+2^(k+1) * (lg 2^k + lg 2)
+2^(k+1) * lg (2^k * 2)
+2^(k+1) * lg 2^(k+1)
+
+
+I got help understanding this from:
+http://answers-by-me.blogspot.com/2010/07/clrs-2e-exercise-23-3.html
