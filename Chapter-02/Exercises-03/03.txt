@@ -23,3 +23,4 @@ T(k+1) = 2T(2^(k+1)/2) + 2^(k+1)
 
 I got help understanding this from:
 http://answers-by-me.blogspot.com/2010/07/clrs-2e-exercise-23-3.html
+and GeminiShadows on IRC
