@@ -23,16 +23,16 @@ Assumption:
     Number of recursions is (lg n + 1)
 
 Basis:
-T(1) = lg 1 + 1 = 0 + 1 = 1
+    T(1) = lg 1 + 1 = 0 + 1 = 1
 
 Induction:
-T(n)                =>
-T(n/2) + 1          =>
-(lg (n/2) + 1) + 1  =>
-(lg n/2) + 2        =>
-(lg n - lg 2) + 2   =>
-(lg n - 1) + 2      =>
-lg n + 1
+    T(n)                =>
+    T(n/2) + 1          =>
+    (lg (n/2) + 1) + 1  =>
+    (lg n/2) + 2        =>
+    (lg n - lg 2) + 2   =>
+    (lg n - 1) + 2      =>
+    lg n + 1
 
 We can ignore the lowest order term, yielding T(n) = lg n.
 Therefore Θ(lg n) is the worst-case time.
