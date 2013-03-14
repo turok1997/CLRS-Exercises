@@ -6,7 +6,7 @@ portion of the sequence each time.  Write pseudocode, either iterative or
 recursive, for binary search.  Argue that the worst-case running time of
 binary search is Θ(lg n).
 
-BINARY-SEARCH(A)
+BINARY-SEARCH(A, v)
     i = A.length/2
     if v == A[i]
         return i
