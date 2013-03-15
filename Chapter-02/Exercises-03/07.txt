@@ -2,4 +2,24 @@
 another integer x, determines whether or not there exist two elements in S
 whose sum is exactly x.
 
+SUM-EXISTS(S, x)
+    MERGE-SORT(S)
+    for i = 1 to S.length
+        S' = S[i+1..n]
+        exists = BINARY-SEARCH(S', x - S[i])
+        if exists == TRUE
+            return TRUE
+    return FALSE
 
+Looking at other people's solutions helped me understand this one.
+
+Proof of Θ(n lg n) time complexity:
+
+Θ(MERGE-SORT) = n lg n
+Θ(BINARY-SEARCH) = lg n
+
+T(n) =>
+Θ(MERGE-SORT) + n Θ(BINARY-SEARCH) =>
+n lg n + n lg n =>
+2(n lg n) =>
+n lg n
