@@ -1,0 +1,82 @@
+Bubblesort is a popular, but inefficient, sorting algorithm.  It works by
+repeatedly swapping adjacent elements that are out of order.
+
+BUBBLESORT(A)
+    for i = 1 to A.length - 1
+        for j = A.length downto i + 1
+            if A[j] < A[j-1]
+                exchange A[j] with A[j-1]
+
+a)  Let A' denote the output of BUBBLESORT(A).  To prove that BUBBLESORT is
+    correct, we need to prove that it terminates and that
+        (2.3)   A'[1] ≤ A'[2] ≤ ... ≤ A'[n]
+    where n = A.length.  In order to show that BUBBLESORT actually sorts, what
+    else do we need to prove?
+
+We must prove that the elements in A' are the same as the elements in A.
+
+The next two parts will prove inequality (2.3)
+
+b)  State precisely a loop invariant for the for loop in lines 2-4, and prove
+    that this loop invariant holds.  Your proof should use the structure of the
+    loop invariant proof presented in this chapter.
+
+Loop Invariant:
+    At the beginning of each iteration of the loop the elements in A[j..n] are
+    a permutation of the elements that were originally in A[j..n] at the start
+    of the first iteration of the loop such that A[j] contains the smallest
+    element in A[j..n].
+
+Initialization:
+    At the beginning of the first iteration j == A.length.  Because n is
+    defined as A.length it is trivial to see that A[j] is the minimum value
+    in A[j..n] and that it is a permutation of the starting order of A[j..n].
+
+Maintenance:
+    Because A[j] is the smallest element in A[j..n], if it is smaller than
+    A[j-1] it will be swapped with it.  Otherwise, nothing happens.  This means
+    that on the next iteration of the loop A[j] will either be the previous value
+    of what is currently A[j+1] or the unchanged value of what was previously at
+    the current location of A[j].  Therefore A[j..n] must still be a permutation
+    of the original A[j..n] from the start of the first iteration.
+
+Termination:
+    When the loop terminates j will be equal to i.  Substituting i for j
+    in the Invariant tells us that A[i] is the smallest element in A[i..n].
+
+c)  Using the termination condition of the loop invariant proved in part (b),
+    state a loop invariant for the for loop in lines 1-4 that will allow you
+    to prove inequality (2.3). Your proof should use the structure of the loop
+    invariant proof presented in this chapter.
+
+Loop Invariant:
+    At the beginning of each iteration the first i-1 elements of A are in 
+    sorted order and are smaller in value than the elements of A[i..n]. A is a
+    permutation of the original ordering of A.
+
+Initialization:
+    At the start of the loop i == 1.  At this point this means the first 0
+    elements are smaller than the elements in A[1..n] and are in sorted order.
+    As this is a zero element array this is trivially true.
+
+Maintenance:
+    As per the Termination condition of the inner loop, when the next iteration
+    occurs the values that are in A[1..i-1] will be the smallest value of
+    the previous iterations' inner loops.  Therefore A[1..i-1] will be in
+    sorted order and smaller than the elements of A[i..n].  As the inner loop
+    only creates permutations of A, A will still be a permutation of the
+    initial array.
+
+Termination:
+    When the loop ends i will be equal to n.  Therefore, when the loop ends
+    the first i-1 elements will be in sorted order and less than the remaining
+    values in A[i..n].  Because A[i..n] is simply the single element array A[n]
+    and it guaranteed to contain only elements larger than the elements in the
+    subarray A[1..i-1] we can conclude that A[1..n] is in sorted order.
+
+d)  What is the worst-case running time of bubblesort?  How does it compare to
+    the running time of insertion sort?
+
+The worst case running time of bubblesort is Θ(n^2) because it relies on
+a for loop within a for loop which both iterate over the array.  This is the
+same worst case running time as insertion sort.
