@@ -1,0 +1,67 @@
+Correctness of Horner's rule
+
+The following code fragment implements Horner's rule for evaluating a polynomial
+given the coefficients a0, a1, ..., an and a value for x:
+
+    y = 0
+    for i = n downto 0
+        y = ai + x * y
+
+a)  In terms of Θ-notation, what is the running time of this code 
+    fragment for Horner's rule?
+
+This code fragment iterates over n elements once and is therefore Θ(n).
+
+b)  Write pseudocode to implement the naive polynomial-evaluation algorithm
+    that computes each term of the polynomial from scratch.  What is the
+    running time of this algorithm? How does it compare to Horner's rule?
+
+y = A[1]
+for i = 2 to A.length
+    x' = 1
+    for j = 1 to i - 1
+        x' = x' * x
+    y = A[i] * x' + y
+
+This is an Θ(n^2) worst-case algorithm due to the nested for loop within
+the outer for loop.  For each coefficient other than the first it requires
+an iteration of the loop to multiply the x value out.  This is much worse
+than Horner's rule, with its Θ(n) run time.  While this isn't terrible for
+low order polynomials if one wanted to calculate the value for a polynomial
+with 100 terms the different would be large due to the growth rate of
+an Θ(n^2) run time function.
+
+c)  Consider the following loop invariant:
+        y = Σ(a[k + i + 1] * x^k, k, 0, n - (i + 1))
+    Interpret a summation with no terms as equaling 0.  Following the
+    structure of the loop invariant proof presented in this chapter, use this
+    loop invariant to show that at termination,
+        y = Σ(a[k] * x^k, k, 0, n)
+
+Initialization:
+    When the loop begins i = n, and y = 0. Substituting in the loop invariant
+    yeilds:
+        Σ(a[k + n + 1] * x^k, k, 0, n - (n + 1))
+        Σ(a[k + n + 1] * x^k, k, 0, -1)
+        Not evaluated, y = 0
+
+Maintenance:
+(with help from http://answers-by-me.blogspot.com/2010/07/clrs-2e-problem-2-3.html)
+    The sum of each iteration is the sum of each previous iteration.
+    y' = a[i] + x * y
+    y' = a[i] + x * Σ(a[k + i + 1] * x^k, k, 0 (n - (i + 1)))
+    y' = a[i] + Σ(a[k + i + 1] * x^(k + 1))
+    let k' = k + 1 in y' = Σ(a[k' + i] * x^k', k', 0, n - i)
+    let i' = i + 1 in y' = Σ(a[k' + i' + 1] * x^k', k', 0, n - (i + 1))
+
+Termination:
+    At termination i = -1 so:
+        y = Σ(a[k + -1 + 1] * x^k, k, 0, n - (-1 + 1))
+        y = Σ(a[k] * x^k, k, 0, n)
+
+d)  Conclude by arguing that the given code fragment correctly evaluates a
+    polynomial characterized by the coefficients a[0], a[1], ..., a[n].
+
+At the start of the algorithm the variable y is set to an initial zero. During
+each iteration it calculates the next part of the sum using Horner's rule until
+it reaches i = -1, where there are no more coefficients to sum.
